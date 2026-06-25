@@ -16,6 +16,7 @@ const CATEGORY_ICONS: Record<string, string> = {
   '教育': '🎓',
   '生活': '🌿',
   '商业': '📊',
+  '一人公司': '🚀',
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -29,6 +30,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   '教育': 'bg-violet-100 text-violet-700 border-violet-200',
   '生活': 'bg-teal-100 text-teal-700 border-teal-200',
   '商业': 'bg-orange-100 text-orange-700 border-orange-200',
+  '一人公司': 'bg-teal-100 text-teal-700 border-teal-200',
 };
 
 const HEAT_LABELS = (heat: number) => {

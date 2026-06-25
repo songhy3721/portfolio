@@ -16,6 +16,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   '教育': 'bg-violet-50 text-violet-700 border-violet-200',
   '生活': 'bg-teal-50 text-teal-700 border-teal-200',
   '商业': 'bg-orange-50 text-orange-700 border-orange-200',
+  '一人公司': 'bg-teal-50 text-teal-700 border-teal-200',
 };
 
 const HEAT_BADGE = (heat: number) => {
