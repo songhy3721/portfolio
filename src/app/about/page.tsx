@@ -82,9 +82,6 @@ export default function AboutPage() {
             <a href={profileData.contact.github} target="_blank" className="flex items-center gap-2 text-text-secondary hover:text-accent transition-colors">
               <GitBranch size={16} /> GitHub
             </a>
-            <a href={profileData.contact.twitter} target="_blank" className="flex items-center gap-2 text-text-secondary hover:text-accent transition-colors">
-              <Globe size={16} /> Twitter
-            </a>
             <span className="flex items-center gap-2 text-text-secondary">
               <MessageCircle size={16} /> 微信: {profileData.contact.wechat}
             </span>

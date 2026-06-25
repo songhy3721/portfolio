@@ -45,15 +45,6 @@ export default function ContactPage() {
                   <p className="text-sm">{profileData.contact.github}</p>
                 </div>
               </a>
-              <a href={profileData.contact.twitter} target="_blank" className="flex items-center gap-3 text-text-secondary hover:text-accent transition-colors group">
-                <div className="w-10 h-10 rounded-xl bg-surface-alt border border-border flex items-center justify-center group-hover:bg-accent-light group-hover:border-accent transition-all">
-                  <Globe size={18} />
-                </div>
-                <div>
-                  <p className="text-text-primary font-medium">Twitter</p>
-                  <p className="text-sm">{profileData.contact.twitter}</p>
-                </div>
-              </a>
               <div className="flex items-center gap-3 text-text-secondary">
                 <div className="w-10 h-10 rounded-xl bg-surface-alt border border-border flex items-center justify-center">
                   <MapPin size={18} />

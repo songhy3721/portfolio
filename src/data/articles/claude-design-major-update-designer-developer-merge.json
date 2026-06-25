@@ -7,9 +7,17 @@
   "source": "manual",
   "sourceUrl": "https://www.36kr.com/p/3858531433780228",
   "sourceName": "创意工坊",
-  "tags": ["Claude Design", "Anthropic", "AI设计", "Figma", "设计转代码", "MCP", "设计系统"],
+  "tags": [
+    "Claude Design",
+    "Anthropic",
+    "AI设计",
+    "Figma",
+    "设计转代码",
+    "MCP",
+    "设计系统"
+  ],
   "publishedAt": "2026-06-25",
   "views": 9500,
   "contentPreview": "6月18日深夜，Anthropic毫无预警地放出了Claude Design的大版本更新，一口气砸出四个新功能。最狠的是设计系统一键导入——在Claude Code终端里敲一下/design-sync……",
-  "content": "<h2>Anthropic深夜甩出四个大招，Claude Design要把设计师和程序员变成同一种人</h2><p>6月18日深夜，Anthropic毫无预警地放出了Claude Design的大版本更新，一口气砸出四个新功能。</p><h3>设计系统一键导入</h3><p>最狠的那个——在Claude Code终端里敲一下 <code>/design-sync</code>，你GitHub仓库里的品牌色值、字体规范、组件库、间距规则全部被拉进Claude Design。之后每次生成设计稿，Claude都拿你的真实组件去搭，搭完自己审一遍，不合规范自己改好再给你看。</p><p>Anthropic设计师Nate Parrott亲自录了一段演示：他把一个浅色邮件注册页面改成深绿色暗色版本，Claude没有直接出图——它读取设计规范两遍，精修输出六遍，总共跑了<strong>八轮自查</strong>才敢把结果呈上来。每一块的配色、字体、间距都严格跟着品牌规范走，对比度和层级跟浅色版完全一致。</p><h3>代码双向同步</h3><p>两条新命令 <code>/design-sync</code> 和 <code>/design</code> 打通了Claude Design和Claude Code的通道。设计稿在Claude Design里做完，一个动作推进Claude Code写代码；反过来，代码写到一半想看界面，一行命令拉出可视化项目。以前设计转代码的交接本质上是一次有损导出——设计师在一个工具做完，工程师在另一个工具重新搭，等真实组件和响应式状态加进来就七零八落了。这个过程现在没了。</p><h3>9大平台一键导出</h3><p>导出目的地一口气扩到9个：Adobe、Canva、Vercel、Replit、Miro、Gamma、Lovable、Wix、Base44。Vercel和Replit的高管第一时间表态，口径出奇一致——不提"设计师"，统一换成了"建造者"。创始人、产品经理、市场人员、独立开发者，全都能用。</p><h3>画布编辑重做</h3><p>拖拽、缩放、对齐，在画面上直接动手，不用每改一个像素都烧一轮模型调用。Claude Design生成的不是一堆改不动的效果图，而是活的组件——你可以像用Figma一样拖它，也可以像写代码一样改它。</p><h3>半年混战格局</h3><p>3月18日Google Stitch大更新，Figma股价跌约8%。4月17日Claude Design发布首周100万用户涌入，Figma再跌约7.5%。5月20日Figma反击推出原生AI设计代理，Q1营收3.334亿美元同比涨46%。6月18日Claude Design补上所有短板。</p><p>半年之内设计工具从Figma一家独大变成五方混战。十年来第一次。</p><p>但这场仗的重点不只在设计工具本身。背后站着Google、Anthropic、OpenAI三家冲刺通用人工智能的公司，不约而同把手伸进了设计领域。设计工具只是扩张产品版图、抢占用户入口的棋子。</p><p>设计师和开发者正在变成同一种人。不是因为谁被淘汰了——是因为中间那堵名为"交接、标注、排期、返工"的墙被拆掉了。</p><p><em>来源：36氪、新浪财经、Anthropic官方X账号（2026年6月18日-19日报道）</em></p>"
+  "content": "<h2>Anthropic深夜甩出四个大招，Claude Design要把设计师和程序员变成同一种人</h2><p>6月18日深夜，Anthropic毫无预警地放出了Claude Design的大版本更新，一口气砸出四个新功能。</p><h3>设计系统一键导入</h3><p>最狠的那个——在Claude Code终端里敲一下 /design-sync，你GitHub仓库里的品牌色值、字体规范、组件库、间距规则全部被拉进Claude Design。之后每次生成设计稿，Claude都拿你的真实组件去搭，搭完自己审一遍，不合规范自己改好再给你看。</p><p>Anthropic设计师Nate Parrott亲自录了一段演示：他把一个浅色邮件注册页面改成深绿色暗色版本，Claude没有直接出图——它读取设计规范两遍，精修输出六遍，总共跑了八轮自查才敢把结果呈上来。每一块的配色、字体、间距都严格跟着品牌规范走，对比度和层级跟浅色版完全一致。</p><h3>代码双向同步</h3><p>两条新命令 /design-sync 和 /design 打通了Claude Design和Claude Code的通道。设计稿在Claude Design里做完，一个动作推进Claude Code写代码；反过来，代码写到一半想看界面，一行命令拉出可视化项目。以前设计转代码的交接本质上是一次有损导出——设计师在一个工具做完，工程师在另一个工具重新搭，等真实组件和响应式状态加进来就七零八落了。这个过程现在没了。</p><h3>9大平台一键导出</h3><p>导出目的地一口气扩到9个：Adobe、Canva、Vercel、Replit、Miro、Gamma、Lovable、Wix、Base44。Vercel和Replit的高管第一时间表态，口径出奇一致——不提设计师，统一换成了建造者。创始人、产品经理、市场人员、独立开发者，全都能用。</p><h3>画布编辑重做</h3><p>拖拽、缩放、对齐，在画面上直接动手，不用每改一个像素都烧一轮模型调用。Claude Design生成的不是一堆改不动的效果图，而是活的组件——你可以像用Figma一样拖它，也可以像写代码一样改它。</p><h3>半年混战格局</h3><p>3月18日Google Stitch大更新，Figma股价跌约8%。4月17日Claude Design发布首周100万用户涌入，Figma再跌约7.5%。5月20日Figma反击推出原生AI设计代理，Q1营收3.334亿美元同比涨46%。6月18日Claude Design补上所有短板。</p><p>半年之内设计工具从Figma一家独大变成五方混战。十年来第一次。</p><p>但这场仗的重点不只在设计工具本身。背后站着Google、Anthropic、OpenAI三家冲刺通用人工智能的公司，不约而同把手伸进了设计领域。设计工具只是扩张产品版图、抢占用户入口的棋子。</p><p>设计师和开发者正在变成同一种人。不是因为谁被淘汰了——是因为中间那堵名为交接、标注、排期、返工的墙被拆掉了。</p><p><em>来源：36氪、新浪财经、Anthropic官方X账号（2026年6月18日-19日报道）</em></p>"
 }

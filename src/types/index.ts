@@ -44,7 +44,7 @@ export interface SiteConfig {
   social: {
     wechat: string;
     github: string;
-    twitter: string;
+    twitter?: string;
     email: string;
   };
   nav: { label: string; path: string }[];
@@ -62,7 +62,7 @@ export interface Profile {
     email: string;
     wechat: string;
     github: string;
-    twitter: string;
+    twitter?: string;
     location: string;
   };
 }

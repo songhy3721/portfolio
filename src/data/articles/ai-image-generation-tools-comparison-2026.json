@@ -7,9 +7,18 @@
   "source": "manual",
   "sourceUrl": "https://indexiahq.com/2026-ai-image-generation-tools-comparison/",
   "sourceName": "创意工坊",
-  "tags": ["Midjourney v7", "Flux Pro", "Imagen 4", "DALL-E 3", "AI生图", "图像生成", "设计工具", "创意工具"],
+  "tags": [
+    "Midjourney v7",
+    "Flux Pro",
+    "Imagen 4",
+    "DALL-E 3",
+    "AI生图",
+    "图像生成",
+    "设计工具",
+    "创意工具"
+  ],
   "publishedAt": "2026-06-25",
   "views": 7200,
   "contentPreview": "2026年上半年，AI图像生成出现了一个分水岭级别的进步：Midjourney v7、Flux 1.1 Pro、Google Imagen 4都解决了2024年最棘手的三大难题……",
-  "content": "<h2>2026 AI图像生成终极对决：四大工具实测，谁该是你的主力？</h2><p>2026年上半年，AI图像生成出现了一个分水岭级别的进步：Midjourney v7、Flux 1.1 Pro、Google Imagen 4都解决了2024年最棘手的"多人物互动""文字渲染""手指数量"三大难题。但工具不止一个，每家强项不同——选错了，等于白花钱。</p><h3>四个维度实测</h3><p><strong>人物写实度</strong>——Midjourney v7拿了9分，光影电影感强；Flux 1.1 Pro也9分，写实度最高看不出AI痕迹；Imagen 4给了7分，色彩好但有"Google风"略过于完美；DALL-E 3只有6分偏插画感。</p><p><strong>文字渲染</strong>——差距最大的一组。Flux 1.1 Pro几乎完美（9.5分），即使中文也有相当高成功率；Imagen 4英文准确9分中文渐入佳境；Midjourney的字常拼错（6分）；DALL-E 3短文字还行长文字易出错（7分）。要做带中文文字的电商海报，Flux是目前最靠谱的选择。</p><p><strong>多人物互动</strong>——Flux手部位置最自然没有六指问题（9分）；Midjourney互动自然比例正确（8.5分）；Imagen和DALL-E构图还行但细节弱（7分）。</p><p><strong>产品照</strong>——Flux最像实拍直接能上电商页面（9.5分）；Midjourney美感强但偶尔艺术化过头不适合电商（9分）；Imagen色彩稳定可重复生成（9分）。</p><h3>不同角色怎么选</h3><p><strong>设计师/视觉工作者</strong>：主力Midjourney v7 + Flux 1.1 Pro。Midjourney出概念，Flux补写实细节，Photoshop收尾。</p><p><strong>营销/社群小编</strong>：Imagen 4（Gemini Advanced订阅）+ DALL-E 3（ChatGPT Plus），工具整合在常用SaaS里不需要额外学。</p><p><strong>电商卖家</strong>：Flux 1.1 Pro + ControlNet，写实度高且可控性强。</p><p><strong>自媒体/YouTuber</strong>：Midjourney v7 + Photoshop加文字，美感最高最容易出"点击感"强的封面。</p><p><strong>技术爱好者</strong>：SDXL自架（RTX 4070以上），零边际成本完全可控。</p><h3>商用授权要注意</h3><p>Midjourney免费试用版不可商用需Standard以上（$30/月起）；Stable Diffusion模型开源但训练数据含未授权艺术家作品已被多次起诉；纯AI生成作品在多数国家无法获得著作权保护，需要有人类创作贡献30%以上。</p><p>一句话结论：<strong>艺术/摄影风格用Midjourney，写实/文字/产品用Flux，品牌设计用Imagen，整合方案用DALL-E</strong>。多数专业人士的打法是两个工具并用——一个出创意一个补细节。</p><p><em>来源：Indexia HQ实测报告（2026年4月30日/6月2日更新）、海洋指南横评（2026年6月10日）</em></p>"
+  "content": "<h2>2026 AI图像生成终极对决：四大工具实测，谁该是你的主力？</h2><p>2026年上半年，AI图像生成出现了一个分水岭级别的进步：Midjourney v7、Flux 1.1 Pro、Google Imagen 4都解决了2024年最棘手的多人物互动、文字渲染、手指数量三大难题。但工具不止一个，每家强项不同——选错了，等于白花钱。</p><h3>四个维度实测</h3><p><strong>人物写实度</strong>——Midjourney v7拿了9分，光影电影感强；Flux 1.1 Pro也9分，写实度最高看不出AI痕迹；Imagen 4给了7分，色彩好但有Google风略过于完美；DALL-E 3只有6分偏插画感。</p><p><strong>文字渲染</strong>——差距最大的一组。Flux 1.1 Pro几乎完美（9.5分），即使中文也有相当高成功率；Imagen 4英文准确9分中文渐入佳境；Midjourney的字常拼错（6分）；DALL-E 3短文字还行长文字易出错（7分）。要做带中文文字的电商海报，Flux是目前最靠谱的选择。</p><p><strong>多人物互动</strong>——Flux手部位置最自然没有六指问题（9分）；Midjourney互动自然比例正确（8.5分）；Imagen和DALL-E构图还行但细节弱（7分）。</p><p><strong>产品照</strong>——Flux最像实拍直接能上电商页面（9.5分）；Midjourney美感强但偶尔艺术化过头不适合电商（9分）；Imagen色彩稳定可重复生成（9分）。</p><h3>不同角色怎么选</h3><p><strong>设计师/视觉工作者</strong>：主力Midjourney v7 + Flux 1.1 Pro。Midjourney出概念，Flux补写实细节，Photoshop收尾。</p><p><strong>营销/社群小编</strong>：Imagen 4（Gemini Advanced订阅）+ DALL-E 3（ChatGPT Plus），工具整合在常用SaaS里不需要额外学。</p><p><strong>电商卖家</strong>：Flux 1.1 Pro + ControlNet，写实度高且可控性强。</p><p><strong>自媒体/YouTuber</strong>：Midjourney v7 + Photoshop加文字，美感最高最容易出点击感强的封面。</p><p><strong>技术爱好者</strong>：SDXL自架（RTX 4070以上），零边际成本完全可控。</p><h3>商用授权要注意</h3><p>Midjourney免费试用版不可商用需Standard以上（0/月起）；Stable Diffusion模型开源但训练数据含未授权艺术家作品已被多次起诉；纯AI生成作品在多数国家无法获得著作权保护，需要有人类创作贡献30%以上。</p><p>一句话结论：艺术/摄影风格用Midjourney，写实/文字/产品用Flux，品牌设计用Imagen，整合方案用DALL-E。多数专业人士的打法是两个工具并用——一个出创意一个补细节。</p><p><em>来源：Indexia HQ实测报告（2026年4月30日/6月2日更新）、海洋指南横评（2026年6月10日）</em></p>"
 }

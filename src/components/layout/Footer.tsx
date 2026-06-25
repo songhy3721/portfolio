@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { GitBranch, Globe, Mail } from 'lucide-react';
+import { GitBranch, Mail } from 'lucide-react';
 import siteData from '@/data/site.json';
 
 export default function Footer() {
@@ -38,9 +38,6 @@ export default function Footer() {
               </a>
               <a href={siteData.social.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-text-secondary hover:text-accent transition-colors text-sm">
                 <GitBranch size={16} /> GitHub
-              </a>
-              <a href={siteData.social.twitter} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-text-secondary hover:text-accent transition-colors text-sm">
-                <Globe size={16} /> Twitter
               </a>
               <span className="flex items-center gap-2 text-text-secondary text-sm">
                 微信: {siteData.social.wechat}
