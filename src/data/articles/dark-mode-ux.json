@@ -1,0 +1,14 @@
+{
+  "slug": "dark-mode-ux",
+  "title": "暗色模式的UX设计：不只是反转颜色",
+  "description": "深入分析暗色模式的设计挑战，从色彩对比度、信息层级到情绪体验，提供系统性的设计方法论。",
+  "summary": "暗色模式远不只是将白色换成黑色。它需要重新思考色彩对比度、信息层级、视觉焦点和情绪传达。本文提供一个完整的暗色模式UX设计框架。",
+  "cover": "/images/articles/dark-mode-ux.jpg",
+  "source": "wechat",
+  "sourceUrl": "https://mp.weixin.qq.com/s/dark-mode-ux-design",
+  "sourceName": "创意工坊",
+  "tags": ["UX设计", "暗色模式", "设计方法论"],
+  "publishedAt": "2025-08-25",
+  "views": 4100,
+  "contentPreview": "当你把一个明亮的设计直接反转成暗色版本时，你会发现很多地方「不对劲」。文字变得刺眼，层级关系模糊，原本温暖的交互变得冷漠……"
+}

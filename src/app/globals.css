@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* === Clean Theme Variables === */
+:root {
+  /* Primary accent - clean indigo */
+  --accent: #4F46E5;
+  --accent-hover: #3730A3;
+  --accent-light: #E0E7FF;
+  --accent-muted: #818CF8;
+
+  /* Backgrounds */
+  --background: #FFFFFF;
+  --surface: #F9FAFB;
+  --surface-alt: #F3F4F6;
+
+  /* Text */
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --text-tertiary: #9CA3AF;
+
+  /* Borders */
+  --border: #E5E7EB;
+  --border-hover: #D1D5DB;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+
+  /* WeChat green */
+  --wechat: #07C160;
+
+  /* Foreground for Next.js */
+  --foreground: #111827;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-accent-muted: var(--accent-muted);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-glass-bg: var(--surface);
+  --color-glass-border: var(--border);
+  --color-wechat: var(--wechat);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* === Base Styles === */
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === Replaced Utility Classes (keeping names for compatibility) === */
+
+/* gradient-text → accent colored text */
+.gradient-text {
+  color: var(--accent);
+}
+
+/* gradient-bg → solid accent background */
+.gradient-bg {
+  background: var(--accent);
+}
+
+/* gradient-bg-animated → accent-light placeholder (no animation) */
+.gradient-bg-animated {
+  background: var(--accent-light);
+}
+
+/* gradient-border → clean bordered card */
+.gradient-border {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+/* glass → clean surface card */
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+/* glass-strong → slightly more visible surface */
+.glass-strong {
+  background: var(--surface-alt);
+  border: 1px solid var(--border-hover);
+  border-radius: 12px;
+}
+
+/* hover-glow → subtle shadow lift */
+.hover-glow {
+  transition: all 0.2s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.hover-glow-strong:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* === Animations (simplified) === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* === Skeleton Loading === */
+.skeleton {
+  background: linear-gradient(90deg, var(--surface) 25%, var(--surface-alt) 50%, var(--surface) 75%);
+  background-size: 200% 100%;
+  animation: pulse 1.5s infinite;
+  border-radius: 8px;
+}
+
+/* === Selection & Focus === */
+::selection {
+  background: var(--accent-light);
+  color: var(--text-primary);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* === Divider === */
+.gradient-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+/* === WeChat Badge === */
+.wechat-badge {
+  background: var(--wechat);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}

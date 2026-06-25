@@ -1,0 +1,42 @@
+{
+  "name": "songhy",
+  "title": "songhy | 作品·工具·灵感",
+  "description": "个人作品展示与创意工具分享平台，汇集签约作品、自制工具与深度文章",
+  "url": "https://songhy.dev",
+  "author": {
+    "name": "songhy",
+    "avatar": "/images/avatar.jpg",
+    "bio": "专注于创意设计与技术开发，致力于打造有温度的数字作品",
+    "tagline": "用代码创造，用设计表达"
+  },
+  "colors": {
+    "gradientPrimary": "#4F46E5",
+    "gradientSecondary": "#6366F1",
+    "gradientTertiary": "#818CF8",
+    "darkBase": "#FFFFFF",
+    "darkMid": "#F9FAFB",
+    "darkTop": "#F3F4F6",
+    "glassBg": "rgba(255, 255, 255, 0.95)",
+    "glassBorder": "rgba(0, 0, 0, 0.08)",
+    "textPrimary": "#111827",
+    "textSecondary": "#6B7280"
+  },
+  "seo": {
+    "keywords": ["songhy", "作品展示", "创意工具", "个人作品集", "设计师作品", "开发工具"],
+    "ogImage": "/images/og-default.png"
+  },
+  "social": {
+    "wechat": "songhy",
+    "github": "https://github.com/songhy3721",
+    "email": "hello@songhy.dev"
+  },
+  "nav": [
+    { "label": "首页", "path": "/" },
+    { "label": "作品", "path": "/works" },
+    { "label": "插件", "path": "/plugins" },
+    { "label": "资讯", "path": "/news" },
+    { "label": "文章", "path": "/articles" },
+    { "label": "关于", "path": "/about" },
+    { "label": "联系", "path": "/contact" }
+  ]
+}

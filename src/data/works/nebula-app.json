@@ -1,0 +1,19 @@
+{
+  "slug": "nebula-app",
+  "title": "星云社交App交互设计",
+  "description": "为新一代社交平台设计的完整交互方案，包含核心功能流程、微交互细节、视觉动效及无障碍适配方案。",
+  "longDescription": "星云（Nebula）是一款面向Z世代的内容社交应用，核心理念是「让每一颗星星都能找到自己的宇宙」。\n\n交互设计重点解决三个问题：\n1. 内容发现 — 通过渐变色彩映射用户兴趣图谱，滑动浏览时色彩渐变流动\n2. 社交匹配 — 基于兴趣共鸣而非外貌匹配，交互反馈温和而非刺激\n3. 内容创作 — 极简创作流程，3步即可发布，支持渐变滤镜和动态背景\n\n关键交互亮点：\n- 双指缩放星球发现新内容\n- 长按渐变色块展开兴趣分支\n- 拖拽星球建立社交连接\n- 所有交互均提供触觉反馈",
+  "cover": "/images/works/nebula-app.jpg",
+  "gallery": [
+    "/images/works/nebula-flow.jpg",
+    "/images/works/nebula-interaction.jpg",
+    "/images/works/nebula-ui-detail.jpg"
+  ],
+  "type": "app",
+  "tags": ["交互设计", "App设计", "社交产品"],
+  "partner": "星云科技",
+  "partnerLink": "https://nebula-app.example.com",
+  "publishedAt": "2025-06-20",
+  "views": 9500,
+  "featured": true
+}

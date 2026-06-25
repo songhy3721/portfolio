@@ -1,0 +1,19 @@
+{
+  "slug": "flow-motion",
+  "title": "流光动态海报系列",
+  "description": "为某音乐节设计的系列动态海报，通过流体模拟与粒子系统创造沉浸式视觉体验，支持线上交互与线下打印双版本。",
+  "longDescription": "流光（Flow Motion）是为「声浪音乐节」设计的系列视觉作品。\n\n每张海报对应一位表演艺人，通过流体动力学模拟将艺人的音乐风格转化为视觉语言：\n- 电子音乐 → 高速粒子流 + 霓虹渐变\n- 独立摇滚 → 粗粝噪点 + 红橙色流\n- 古典跨界 → 优雅曲线 + 柔紫渐变\n\n线上版本支持鼠标交互：移动光标改变流场方向，点击产生涟漪扩散效果。线下版本保留渐变美学，采用特殊印刷工艺呈现流动质感。\n\n技术实现：WebGL + Three.js流体粒子系统，实时交互响应。",
+  "cover": "/images/works/flow-motion.jpg",
+  "gallery": [
+    "/images/works/flow-electronic.jpg",
+    "/images/works/flow-rock.jpg",
+    "/images/works/flow-classical.jpg"
+  ],
+  "type": "creative",
+  "tags": ["动态海报", "创意设计", "交互视觉"],
+  "partner": "声浪音乐节",
+  "partnerLink": "https://soundwave-fest.example.com",
+  "publishedAt": "2025-09-10",
+  "views": 15600,
+  "featured": true
+}

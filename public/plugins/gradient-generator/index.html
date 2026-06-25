@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渐变生成器</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0f0c29;
+      color: #f0f0f0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 20px;
+      background: rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    .toolbar label { font-size: 13px; color: #a0a0b0; }
+    .toolbar select, .toolbar input[type="range"] {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #f0f0f0;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+    .toolbar input[type="range"] { width: 120px; accent-color: #667eea; }
+    .toolbar select { cursor: pointer; }
+    .preview-area {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .gradient-preview {
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: background 0.3s ease;
+      cursor: crosshair;
+    }
+    .color-stops {
+      padding: 16px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      background: rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .color-stop {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .color-stop input[type="color"] {
+      width: 32px;
+      height: 32px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      cursor: pointer;
+      background: none;
+    }
+    .color-stop input[type="number"] {
+      width: 50px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #f0f0f0;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .add-btn {
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.2s;
+    }
+    .add-btn:hover { opacity: 0.8; }
+    .remove-btn {
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255,100,100,0.3);
+      color: #ff6b6b;
+      font-size: 11px;
+      cursor: pointer;
+      border: none;
+    }
+    .code-output {
+      padding: 16px 20px;
+      background: rgba(0,0,0,0.3);
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .code-box {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      padding: 12px;
+      font-family: monospace;
+      font-size: 13px;
+      color: #667eea;
+      word-break: break-all;
+      position: relative;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      font-size: 11px;
+      cursor: pointer;
+      border: none;
+    }
+    .presets {
+      padding: 12px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .preset-btn {
+      width: 40px;
+      height: 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: transform 0.2s;
+    }
+    .preset-btn:hover { transform: scale(1.1); }
+    @media (max-width: 640px) {
+      .gradient-preview { height: 250px; }
+      .toolbar { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <label>类型</label>
+    <select id="gradientType">
+      <option value="linear">线性渐变</option>
+      <option value="radial">径向渐变</option>
+      <option value="conic">锥形渐变</option>
+    </select>
+    <label>角度</label>
+    <input type="range" id="angle" min="0" max="360" value="135">
+    <span id="angleValue">135°</span>
+  </div>
+
+  <div class="presets">
+    <div class="preset-btn" style="background:linear-gradient(135deg,#667eea,#764ba2)" onclick="applyPreset(['#667eea','#764ba2'])"></div>
+    <div class="preset-btn" style="background:linear-gradient(135deg,#f093fb,#f5576c)" onclick="applyPreset(['#f093fb','#f5576c'])"></div>
+    <div class="preset-btn" style="background:linear-gradient(135deg,#4facfe,#00f2fe)" onclick="applyPreset(['#4facfe','#00f2fe'])"></div>
+    <div class="preset-btn" style="background:linear-gradient(135deg,#43e97b,#38f9d7)" onclick="applyPreset(['#43e97b','#38f9d7'])"></div>
+    <div class="preset-btn" style="background:linear-gradient(135deg,#fa709a,#fee140)" onclick="applyPreset(['#fa709a','#fee140'])"></div>
+    <div class="preset-btn" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)" onclick="applyPreset(['#a18cd1','#fbc2eb'])"></div>
+  </div>
+
+  <div class="preview-area">
+    <div class="gradient-preview" id="preview"></div>
+  </div>
+
+  <div class="color-stops" id="colorStops">
+    <div class="color-stop">
+      <input type="color" value="#667eea" onchange="updateGradient()">
+      <input type="number" value="0" min="0" max="100" onchange="updateGradient()">%
+      <button class="remove-btn" onclick="removeStop(this)" style="display:none">✕</button>
+    </div>
+    <div class="color-stop">
+      <input type="color" value="#764ba2" onchange="updateGradient()">
+      <input type="number" value="100" min="0" max="100" onchange="updateGradient()">%
+      <button class="remove-btn" onclick="removeStop(this)">✕</button>
+    </div>
+    <button class="add-btn" onclick="addStop()">+ 添加色标</button>
+  </div>
+
+  <div class="code-output">
+    <div class="code-box" id="codeBox">
+      <button class="copy-btn" onclick="copyCode()">复制</button>
+    </div>
+  </div>
+
+  <script>
+    const typeSelect = document.getElementById('gradientType');
+    const angleInput = document.getElementById('angle');
+    const angleValue = document.getElementById('angleValue');
+    const preview = document.getElementById('preview');
+    const colorStopsDiv = document.getElementById('colorStops');
+    const codeBox = document.getElementById('codeBox');
+    const addBtn = colorStopsDiv.querySelector('.add-btn');
+
+    angleInput.addEventListener('input', () => {
+      angleValue.textContent = angleInput.value + '°';
+      updateGradient();
+    });
+
+    typeSelect.addEventListener('change', updateGradient);
+
+    function getStops() {
+      const stops = [];
+      colorStopsDiv.querySelectorAll('.color-stop').forEach(el => {
+        const color = el.querySelector('input[type="color"]').value;
+        const pos = el.querySelector('input[type="number"]').value;
+        stops.push({ color, pos });
+      });
+      stops.sort((a, b) => a.pos - b.pos);
+      return stops;
+    }
+
+    function updateGradient() {
+      const stops = getStops();
+      const type = typeSelect.value;
+      const angle = angleInput.value;
+      const stopsStr = stops.map(s => `${s.color} ${s.pos}%`).join(', ');
+
+      let css;
+      if (type === 'linear') css = `linear-gradient(${angle}deg, ${stopsStr})`;
+      else if (type === 'radial') css = `radial-gradient(circle, ${stopsStr})`;
+      else css = `conic-gradient(from ${angle}deg, ${stopsStr})`;
+
+      preview.style.background = css;
+      codeBox.textContent = css;
+      const copyBtn = document.createElement('button');
+      copyBtn.className = 'copy-btn';
+      copyBtn.textContent = '复制';
+      copyBtn.onclick = copyCode;
+      codeBox.appendChild(copyBtn);
+    }
+
+    function addStop() {
+      const div = document.createElement('div');
+      div.className = 'color-stop';
+      const colors = ['#f093fb','#4facfe','#43e97b','#fa709a','#a18cd1'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      div.innerHTML = `
+        <input type="color" value="${randomColor}" onchange="updateGradient()">
+        <input type="number" value="50" min="0" max="100" onchange="updateGradient()">%
+        <button class="remove-btn" onclick="removeStop(this)">✕</button>
+      `;
+      colorStopsDiv.insertBefore(div, addBtn);
+      updateGradient();
+    }
+
+    function removeStop(btn) {
+      const stops = colorStopsDiv.querySelectorAll('.color-stop');
+      if (stops.length <= 2) return;
+      btn.parentElement.remove();
+      updateGradient();
+    }
+
+    function applyPreset(colors) {
+      const stops = colorStopsDiv.querySelectorAll('.color-stop');
+      stops.forEach((s, i) => {
+        if (i < colors.length) {
+          s.querySelector('input[type="color"]').value = colors[i];
+          s.querySelector('input[type="number"]').value = Math.round(i / (colors.length - 1) * 100);
+        }
+      });
+      // Remove extra stops
+      for (let i = colors.length; i < stops.length; i++) {
+        stops[i].remove();
+      }
+      // Add if needed
+      for (let i = stops.length; i < colors.length; i++) {
+        addStop();
+        const newStops = colorStopsDiv.querySelectorAll('.color-stop');
+        newStops[i].querySelector('input[type="color"]').value = colors[i];
+      }
+      updateGradient();
+    }
+
+    function copyCode() {
+      const stops = getStops();
+      const type = typeSelect.value;
+      const angle = angleSelect = angleInput.value;
+      const stopsStr = stops.map(s => `${s.color} ${s.pos}%`).join(', ');
+      let css;
+      if (type === 'linear') css = `background: linear-gradient(${angle}deg, ${stopsStr});`;
+      else if (type === 'radial') css = `background: radial-gradient(circle, ${stopsStr});`;
+      else css = `background: conic-gradient(from ${angle}deg, ${stopsStr});`;
+      
+      navigator.clipboard.writeText(css).then(() => {
+        const btn = codeBox.querySelector('.copy-btn');
+        btn.textContent = '已复制!';
+        setTimeout(() => btn.textContent = '复制', 1500);
+      });
+    }
+
+    updateGradient();
+  </script>
+</body>
+</html>

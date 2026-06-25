@@ -1,0 +1,24 @@
+{
+  "slug": "color-picker",
+  "title": "色彩拾取器",
+  "description": "从图片中提取配色方案的智能工具。上传任意图片，自动识别主色调并生成完整配色方案，支持导出色板。",
+  "icon": "🎯",
+  "category": "design",
+  "tags": ["配色", "图片分析", "设计工具"],
+  "demoUrl": "/plugins/color-picker/",
+  "sourceUrl": "https://github.com/creative-workshop/color-picker",
+  "downloadUrl": "/downloads/color-picker.zip",
+  "instructions": "1. 上传或拖拽图片到分析区域\n2. 工具自动提取5-8个主色调\n3. 点击色块查看详细色值\n4. 调整提取精度和数量\n5. 导出配色方案（CSS/JSON/PNG色板）",
+  "features": [
+    "智能主色调提取",
+    "多精度色值分析",
+    "一键复制色值",
+    "导出多种格式",
+    "历史配色记录",
+    "渐变色板生成"
+  ],
+  "publishedAt": "2025-04-20",
+  "updatedAt": "2025-05-30",
+  "views": 5200,
+  "featured": false
+}

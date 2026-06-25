@@ -1,0 +1,19 @@
+{
+  "slug": "data-viz-kit",
+  "title": "数据可视化组件库",
+  "description": "面向数据分析师的开源可视化组件库，包含10+渐变风格图表组件，支持动态数据绑定与主题自定义。",
+  "longDescription": "Data Viz Kit 是一套为数据分析师设计的渐变风格可视化组件库。\n\n核心特点：\n- 10+预置图表组件（折线图/面积图/饼图/雷达图/热力图等）\n- 所有图表默认渐变色彩方案，告别单调配色\n- 声明式API，一行代码即可渲染图表\n- 支持动态数据绑定，实时刷新\n- 完整的主题自定义系统\n- 响应式设计，自动适配各种屏幕尺寸\n\n技术栈：React + D3.js + CSS Variables，零依赖运行时仅50KB。\n\n已在GitHub获得2000+ stars，被多家公司采用。",
+  "cover": "/images/works/data-viz.jpg",
+  "gallery": [
+    "/images/works/data-viz-charts.jpg",
+    "/images/works/data-viz-theme.jpg",
+    "/images/works/data-viz-api.jpg"
+  ],
+  "type": "tool",
+  "tags": ["数据可视化", "开源组件", "React"],
+  "partner": "开源社区",
+  "partnerLink": "https://github.com/data-viz-kit",
+  "publishedAt": "2024-12-05",
+  "views": 22000,
+  "featured": false
+}

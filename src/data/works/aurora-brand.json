@@ -1,0 +1,20 @@
+{
+  "slug": "aurora-brand",
+  "title": "极光品牌视觉系统",
+  "description": "为某科技初创公司打造的完整品牌视觉识别系统，包含Logo设计、色彩规范、字体系统、UI组件库及品牌应用指南。",
+  "longDescription": "极光（Aurora）是一家专注于AR技术的初创公司，他们需要一个既能体现科技感又能传达温暖人文关怀的品牌形象。\n\n我从极光这一自然现象中汲取灵感，将渐变色彩作为核心视觉语言。Logo采用流动的渐变线条，象征光的折射与变化；色彩系统从深蓝渐变到暖紫，既代表科技的冷静理性，也传递人文的温度。\n\n整套视觉系统涵盖：\n- Logo及变体设计（横版/竖版/图标版）\n- 渐变色彩规范（主色/辅助色/中性色）\n- 字体系统（中文思源黑体 + 英文Inter）\n- UI组件库（按钮/卡片/输入框/导航）\n- 品牌应用指南（印刷/数字/空间）",
+  "cover": "/images/works/aurora-brand.jpg",
+  "gallery": [
+    "/images/works/aurora-logo.jpg",
+    "/images/works/aurora-colors.jpg",
+    "/images/works/aurora-ui.jpg",
+    "/images/works/aurora-guide.jpg"
+  ],
+  "type": "brand",
+  "tags": ["品牌设计", "视觉系统", "UI设计"],
+  "partner": "极光科技",
+  "partnerLink": "https://aurora-tech.example.com",
+  "publishedAt": "2025-03-15",
+  "views": 12800,
+  "featured": true
+}

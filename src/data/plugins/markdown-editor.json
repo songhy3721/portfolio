@@ -1,0 +1,24 @@
+{
+  "slug": "markdown-editor",
+  "title": "渐变Markdown编辑器",
+  "description": "支持实时预览的Markdown编辑器，内置渐变主题切换、代码高亮和图片上传功能。",
+  "icon": "📝",
+  "category": "writing",
+  "tags": ["Markdown", "编辑器", "写作工具"],
+  "demoUrl": "/plugins/markdown-editor/",
+  "sourceUrl": "https://github.com/creative-workshop/markdown-editor",
+  "downloadUrl": "/downloads/markdown-editor.zip",
+  "instructions": "1. 在左侧编辑区输入Markdown文本\n2. 右侧实时渲染预览效果\n3. 使用工具栏快捷插入常用语法\n4. 点击主题切换按钮更换渐变配色\n5. 支持拖拽上传图片\n6. 导出为HTML或PDF",
+  "features": [
+    "实时双栏预览",
+    "渐变主题切换",
+    "代码语法高亮",
+    "图片拖拽上传",
+    "快捷工具栏",
+    "导出HTML/PDF"
+  ],
+  "publishedAt": "2025-02-15",
+  "updatedAt": "2025-06-01",
+  "views": 3400,
+  "featured": true
+}

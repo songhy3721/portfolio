@@ -1,0 +1,14 @@
+{
+  "slug": "gradient-design-guide",
+  "title": "渐变设计指南：从入门到精通",
+  "description": "深入探讨渐变在UI设计中的应用原理、配色技巧和实操方法，帮助你掌握这一强大的视觉工具。",
+  "summary": "渐变是近年来UI设计中最流行的视觉手法之一。本文从色彩理论、渐变类型、实际案例三个维度，系统讲解如何运用渐变创造出色的视觉体验。",
+  "cover": "/images/articles/gradient-guide.jpg",
+  "source": "wechat",
+  "sourceUrl": "https://mp.weixin.qq.com/s/gradient-design-guide",
+  "sourceName": "创意工坊",
+  "tags": ["设计", "渐变", "UI设计"],
+  "publishedAt": "2025-05-12",
+  "views": 5600,
+  "contentPreview": "渐变设计并非简单的色彩叠加，而是需要理解色彩之间的对话关系。好的渐变应该像一首诗，每种颜色都在讲述自己的故事，而它们的过渡则编织出新的篇章……"
+}

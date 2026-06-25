@@ -1,0 +1,14 @@
+{
+  "slug": "creative-tools-dev",
+  "title": "为什么每个设计师都应该学会开发工具",
+  "description": "分享从设计思维到工具开发的思维转变过程，以及自制工具如何提升工作效率和创造力。",
+  "summary": "作为设计师，我们经常遇到重复性操作和效率瓶颈。自制工具不仅能解决这些问题，更是设计思维的延伸——将设计方法论转化为可复用的代码逻辑。",
+  "cover": "/images/articles/creative-tools.jpg",
+  "source": "wechat",
+  "sourceUrl": "https://mp.weixin.qq.com/s/creative-tools-dev",
+  "sourceName": "创意工坊",
+  "tags": ["设计工具", "效率", "开发者思维"],
+  "publishedAt": "2025-07-18",
+  "views": 3200,
+  "contentPreview": "那天我在做配色方案时，又一次手动从图片中提取颜色值。同样的操作，我已经做了不下50次。那一刻我决定：我要写一个工具，让这个过程自动化……"
+}
