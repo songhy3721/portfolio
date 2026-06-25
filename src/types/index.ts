@@ -1,17 +1,17 @@
 export interface Article {
   slug: string;
   title: string;
-  description: string;
   summary: string;
-  cover: string;
-  source: 'wechat' | 'manual' | 'rss';
-  sourceUrl: string;
-  sourceName: string;
+  content?: string;
+  category?: string;
   tags: string[];
+  author?: string;
   publishedAt: string;
-  views: number;
-  contentPreview: string;
-  content?: string; // Full HTML content after sync
+  coverImage?: string;
+  sourceName: string;
+  sourceUrl: string;
+  featured?: boolean;
+  readTime?: number;
 }
 
 export interface SiteConfig {

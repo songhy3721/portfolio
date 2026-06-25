@@ -24,8 +24,8 @@ export function generateArticleStructuredData(article: Article) {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: article.title,
-    description: article.description,
-    image: article.cover,
+    description: article.summary,
+    image: article.coverImage,
     datePublished: article.publishedAt,
     author: {
       '@type': 'Person',

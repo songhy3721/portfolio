@@ -1,13 +1,13 @@
 {
-  "name": "songhy",
-  "title": "songhy | 作品·工具·灵感",
-  "description": "个人作品展示与创意工具分享平台，汇集签约作品、自制工具与深度文章",
+  "name": "一人公司",
+  "title": "一人公司 | 独立创业者的资讯与工具指南",
+  "description": "为独立创业者打造的资讯平台，聚焦一人公司创业指南、商业模式、工具推荐、成功案例与行业趋势",
   "url": "https://songhy.dev",
   "author": {
     "name": "songhy",
     "avatar": "/images/avatar.jpg",
-    "bio": "专注于创意设计与技术开发，致力于打造有温度的数字作品",
-    "tagline": "用代码创造，用设计表达"
+    "bio": "一人公司实践者，分享独立创业的思考与工具",
+    "tagline": "一个人，也可以是一家公司"
   },
   "colors": {
     "gradientPrimary": "#4F46E5",
@@ -22,7 +22,7 @@
     "textSecondary": "#6B7280"
   },
   "seo": {
-    "keywords": ["songhy", "作品展示", "创意工具", "个人作品集", "设计师作品", "开发工具"],
+    "keywords": ["一人公司", "独立创业", "solopreneur", "自由职业", "数字游民", "创业指南", "商业模式", "效率工具"],
     "ogImage": "/images/og-default.png"
   },
   "social": {
@@ -32,11 +32,11 @@
   },
   "nav": [
     { "label": "首页", "path": "/" },
-    { "label": "作品", "path": "/works" },
-    { "label": "插件", "path": "/plugins" },
-    { "label": "资讯", "path": "/news" },
-    { "label": "文章", "path": "/articles" },
-    { "label": "关于", "path": "/about" },
-    { "label": "联系", "path": "/contact" }
+    { "label": "创业指南", "path": "/guide" },
+    { "label": "商业模式", "path": "/business-model" },
+    { "label": "工具资源", "path": "/tools" },
+    { "label": "成功案例", "path": "/cases" },
+    { "label": "行业趋势", "path": "/trends" },
+    { "label": "关于", "path": "/about" }
   ]
 }

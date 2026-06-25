@@ -11,8 +11,8 @@ export default function ArticlesPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="text-4xl font-bold mb-2 text-accent">文章</h1>
-        <p className="text-text-secondary mb-8">来自微信公众号的深度内容</p>
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2 text-accent">深度文章</h1>
+        <p className="text-text-secondary mb-8">一人公司创业指南 · 商业模式分析 · 工具与资源 · 成功案例</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article, i) => (
@@ -28,8 +28,10 @@ export default function ArticlesPage() {
                   <span className="text-2xl text-accent/30">📖</span>
                 </div>
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <span className="wechat-badge">公众号</span>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    {article.category && (
+                      <span className="px-2 py-0.5 rounded-md text-[11px] font-medium bg-accent/10 text-accent border border-accent/20">{article.category}</span>
+                    )}
                     <span className="text-text-tertiary text-xs">{article.sourceName}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-text-primary line-clamp-2">{article.title}</h3>

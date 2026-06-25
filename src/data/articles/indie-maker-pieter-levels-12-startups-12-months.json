@@ -1,0 +1,15 @@
+{
+  "slug": "indie-maker-pieter-levels-12-startups-12-months",
+  "title": "12个月12个创业项目：独立创客Pieter Levels的一人公司实验",
+  "summary": "Nomad List和Remote OK的创建者Pieter Levels以其「12个月12个创业项目」的实验闻名，他的方法论对每个一人公司创业者都有深刻启发。",
+  "content": "## 谁是Pieter Levels\n\nPieter Levels 是全球最知名的独立创业者之一。他一个人创建了 Nomad List（数字游民城市排名）和 Remote OK（远程工作招聘平台），年收入超过百万美元，而且至今没有任何员工。\n\n## 12 Startups in 12 Months 实验\n\n2014年，Pieter 开始了一个疯狂的实验：每个月发布一个新的创业产品。\n\n### 实验规则\n- 每个项目必须在当月完成并发布\n- 用最简陋的MVP验证想法\n- 如果没有人用就果断放弃\n- 如果有人用就继续迭代\n\n### 实验结果\n- 发布了12个产品\n- 大多数失败了（没人用）\n- 但Nomad List和Remote OK从实验中脱颖而出\n- 证明了一个核心观点：**数量是质量的函数**\n\n## 对一人公司的启发\n\n### 1. 想法不值钱，执行力值钱\nPieter 的成功不是因为他有个绝世好idea，而是因为他在12个月内持续地实验和发布。\n\n### 2. 快速失败，快速学习\n每个月一个项目意味着你最多浪费30天在一个失败的方向上。这比花6个月打造一个没人用的产品高效得多。\n\n### 3. 用户反馈是最好的导师\nPieter 不做市场调研，他直接把产品扔到市场上看反应。真实的用户行为胜过任何问卷调查。\n\n### 4. 坚持公开建造\nPieter 在Twitter上实时分享他的进展、收入和失败。这种透明度不仅带来了关注度，也逼迫他持续行动。\n\n## Pieter的技术栈\n\n- HTML + CSS + jQuery （没错，不用React/Vue）\n- PHP 后端\n- SQLite 数据库\n- 单台服务器\n\n他证明了：对于一人公司来说，技术栈不重要，重要的是你能不能用它快速交付价值。\n\n## 行动清单\n\n本周尝试做一件事：选一个你纠结了很久的idea，用48小时做一个最小版本，发布到朋友圈或社交媒体，看看有没有人感兴趣。",
+  "category": "成功案例",
+  "tags": ["成功案例", "Pieter Levels", "独立创客", "一人公司", "MVP", "公开建造"],
+  "author": "songhy",
+  "publishedAt": "2026-06-08",
+  "coverImage": "/images/og-default.png",
+  "sourceName": "一人公司",
+  "sourceUrl": "/cases",
+  "featured": false,
+  "readTime": 7
+}

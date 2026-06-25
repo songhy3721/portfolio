@@ -15,15 +15,15 @@ export default function ContactCTA() {
         viewport={{ once: true }}
       >
         <GlassCard className="text-center py-8 sm:py-12 px-4 sm:px-8" gradientBorder>
-          <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-accent">与我联系</h2>
+          <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-accent">加入一人公司社区</h2>
           <p className="text-text-secondary mb-6">
-            合作洽谈、工具反馈、内容交流 — 期待你的来信
+            分享你的创业故事，交流工具与经验，我们一起成长
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <GradientButton href="/contact" variant="solid" size="md">
-              <Mail size={16} className="mr-2" /> 发送邮件
+            <GradientButton href={`mailto:${siteData.social.email}`} variant="solid" size="md">
+              <Mail size={16} className="mr-2" /> 联系我
             </GradientButton>
-            <GradientButton href={`https://github.com/${siteData.social.github.split('/').pop()}`} variant="outline" size="md">
+            <GradientButton href={siteData.social.github} variant="outline" size="md">
               <GitBranch size={16} className="mr-2" /> GitHub
             </GradientButton>
           </div>

@@ -1,0 +1,15 @@
+{
+  "slug": "ai-tools-stack-for-solopreneur-2026",
+  "title": "一人公司AI效率工具栈：2026年最值得推荐的20+独立创业者利器",
+  "summary": "从内容创作到客户管理，从财务到自动化，为你精选20+款真正好用的一人公司效率工具，附实测体验和使用建议。",
+  "content": "## 为什么一人公司更需要好工具\n\n一人公司最大的约束不是资金，而是时间。选择对的工具，相当于给自己雇了一支虚拟团队。\n\n## 内容创作类\n\n### 写作与编辑\n- **Notion AI**：知识库 + AI写作，一人公司的第二大脑\n- **Claude/ChatGPT**：深度研究、文案撰写、代码辅助\n- **Grammarly**：英文内容校对必备\n\n### 设计与视觉\n- **Canva Pro**：非设计师也能做出专业视觉\n- **Figma**：产品原型与设计协作\n- **Midjourney/DALL-E**：AI生成配图与素材\n\n## 运营与自动化\n\n### 客户管理\n- **飞书/Lark**：轻量CRM + 协作 + 文档\n- **Calendly**：自动预约，告别来回确认时间\n- **Stripe/Lemon Squeezy**：全球收款，零代码搭建支付\n\n### 自动化流程\n- **Make (Integromat)**：连接500+应用的可视化自动化\n- **Zapier**：最成熟的无代码自动化平台\n- **n8n**：开源可自部署的自动化引擎\n\n## 数据与分析\n\n- **Google Analytics 4**：免费且强大的网站分析\n- **Plausible**：隐私友好的轻量分析\n- **Airtable**：比Excel更灵活的低代码数据库\n\n## 工具选择原则\n\n1. **先免费后付费**：先用免费版验证需求\n2. **减少工具数量**：每多一个工具就多一个维护成本\n3. **优先API友好**：能被自动化的工具才是好工具\n4. **关注迁移成本**：别把核心数据锁在一个工具里",
+  "category": "工具资源",
+  "tags": ["效率工具", "AI工具", "一人公司", "自动化", "工具推荐"],
+  "author": "songhy",
+  "publishedAt": "2026-06-18",
+  "coverImage": "/images/og-default.png",
+  "sourceName": "一人公司",
+  "sourceUrl": "/tools",
+  "featured": true,
+  "readTime": 10
+}
