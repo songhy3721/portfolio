@@ -11,16 +11,16 @@ export default function FeaturedWorks() {
   const works = getFeaturedWorks();
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold mb-2 text-accent">精选作品</h2>
-        <p className="text-text-secondary mb-8">签约品牌与创意项目</p>
+        <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-accent">精选作品</h2>
+        <p className="text-text-secondary text-sm sm:text-base mb-5 sm:mb-8">签约品牌与创意项目</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {works.map((work, i) => (
             <motion.div
               key={work.slug}

@@ -8,7 +8,7 @@ import { MapPin } from 'lucide-react';
 
 export default function AboutPreview() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

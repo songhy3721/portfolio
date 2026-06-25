@@ -3,20 +3,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import GlassCard from '@/components/ui/GlassCard';
 import { getNewsSortedByTime } from '@/lib/data/news';
-import { Clock, ExternalLink, TrendingUp, Zap, Globe } from 'lucide-react';
-
-const CATEGORY_ICONS: Record<string, string> = {
-  '国际': '🌍',
-  '科技': '🔬',
-  'AI': '🤖',
-  '财经': '💰',
-  '政策': '📋',
-  '汽车': '🚗',
-  '体育': '⚽',
-  '教育': '🎓',
-  '生活': '🌿',
-  '商业': '📊',
-};
+import { Clock, TrendingUp, Zap, Globe } from 'lucide-react';
 
 const CATEGORY_COLORS: Record<string, string> = {
   '国际': 'bg-blue-50 text-blue-700 border-blue-200',
@@ -31,7 +18,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   '商业': 'bg-orange-50 text-orange-700 border-orange-200',
 };
 
-const HEAT_LABELS = (heat: number) => {
+const HEAT_BADGE = (heat: number) => {
   if (heat >= 90) return { text: '爆', cls: 'bg-red-500 text-white' };
   if (heat >= 80) return { text: '热', cls: 'bg-amber-500 text-white' };
   if (heat >= 70) return { text: '新', cls: 'bg-blue-500 text-white' };
@@ -51,58 +38,88 @@ const formatTime = (dateStr: string) => {
 };
 
 export default function LatestNews() {
-  const news = getNewsSortedByTime().slice(0, 6);
+  const allNews = getNewsSortedByTime();
+  const news = allNews.slice(0, 6);
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        {/* Section Header */}
-        <div className="flex items-end justify-between mb-8">
+        {/* Section Header — compact on mobile */}
+        <div className="flex items-end justify-between mb-5 sm:mb-7">
           <div>
-            <div className="flex items-center gap-3 mb-2">
-              <h2 className="text-3xl font-bold text-accent">最新资讯</h2>
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <h2 className="text-xl sm:text-3xl font-bold text-accent">最新资讯</h2>
+              <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20">
                 <Globe size={12} /> 全网热点
               </span>
             </div>
-            <p className="text-text-secondary text-sm">多源聚合 · 实时追踪科技与产业动态</p>
+            <p className="text-text-secondary text-xs sm:text-sm mt-0.5 sm:mt-1">多源聚合 · 实时追踪科技与产业动态</p>
           </div>
           <Link
             href="/news"
-            className="hidden sm:inline-flex items-center gap-1 text-accent hover:text-accent/80 transition-colors text-sm font-medium"
+            className="text-accent hover:text-accent/80 transition-colors text-sm font-medium shrink-0"
           >
-            查看全部资讯 <ExternalLink size={14} />
+            全部 →
           </Link>
         </div>
 
-        {/* News Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* News Grid — 1 column mobile, 2 col tablet, 3 col desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
           {news.map((item, i) => {
-            const heatInfo = HEAT_LABELS(item.heat);
+            const heatInfo = HEAT_BADGE(item.heat);
             const catColor = CATEGORY_COLORS[item.category] || 'bg-gray-50 text-gray-700 border-gray-200';
             return (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
+                transition={{ delay: Math.min(i * 0.06, 0.3) }}
               >
-                <GlassCard>
-                  <a
-                    href={item.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block space-y-3"
-                  >
-                    {/* Top: Category + Heat + Time */}
+                <a
+                  href={item.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass hover-glow block"
+                >
+                  {/* === Mobile: Compact row === */}
+                  <div className="sm:hidden flex items-start gap-3 p-3">
+                    <span className={`shrink-0 mt-0.5 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium border ${catColor}`}>
+                      {item.category}
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-1.5 mb-1">
+                        <span className="text-sm font-semibold text-text-primary line-clamp-2 leading-snug">
+                          {item.title}
+                        </span>
+                        {heatInfo.text && (
+                          <span className={`shrink-0 px-1 py-0.5 rounded text-[10px] font-bold leading-none ${heatInfo.cls}`}>
+                            {heatInfo.text}
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-2 text-text-tertiary text-[11px]">
+                        <span className="flex items-center gap-0.5">
+                          <Zap size={10} className="text-accent" /> {item.source}
+                        </span>
+                        <span>·</span>
+                        <span className="flex items-center gap-0.5">
+                          <Clock size={10} /> {formatTime(item.publishedAt)}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* === Desktop: Full card === */}
+                  <div className="hidden sm:block p-4 sm:p-5 space-y-3">
+                    {/* Top row */}
                     <div className="flex items-center justify-between">
                       <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-medium border ${catColor}`}>
-                        {CATEGORY_ICONS[item.category] || '📌'} {item.category}
+                        {item.category}
                       </span>
                       <div className="flex items-center gap-2">
                         {heatInfo.text && (
@@ -115,78 +132,47 @@ export default function LatestNews() {
                         </span>
                       </div>
                     </div>
-
                     {/* Title */}
-                    <h3 className="text-base font-semibold text-text-primary line-clamp-2 leading-snug group-hover:text-accent transition-colors">
+                    <h3 className="text-base font-semibold text-text-primary line-clamp-2 leading-snug">
                       {item.title}
                     </h3>
-
                     {/* Summary */}
                     <p className="text-text-secondary text-sm line-clamp-2 leading-relaxed">
                       {item.summary}
                     </p>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-1.5">
-                      {item.tags.slice(0, 3).map(tag => (
-                        <span
-                          key={tag}
-                          className="px-2 py-0.5 rounded text-[11px] bg-surface-alt text-text-tertiary border border-border"
-                        >
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Footer */}
+                    {/* Tags + Source */}
                     <div className="flex items-center justify-between text-xs pt-2 border-t border-border">
-                      <span className="text-text-tertiary flex items-center gap-1">
+                      <div className="flex flex-wrap gap-1">
+                        {item.tags.slice(0, 3).map(tag => (
+                          <span key={tag} className="px-1.5 py-0.5 rounded text-[11px] bg-surface-alt text-text-tertiary border border-border">
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                      <span className="text-text-tertiary flex items-center gap-1 shrink-0">
                         <Zap size={10} className="text-accent" /> {item.source}
                       </span>
-                      <span className="flex items-center gap-1 text-accent text-xs">
-                        查看 <ExternalLink size={10} />
-                      </span>
                     </div>
-                  </a>
-                </GlassCard>
+                  </div>
+                </a>
               </motion.div>
             );
           })}
         </div>
 
-        {/* Mobile view-all link */}
-        <div className="mt-8 text-center sm:hidden">
-          <Link
-            href="/news"
-            className="inline-flex items-center gap-1 text-accent hover:text-accent/80 transition-colors text-sm font-medium"
-          >
-            查看全部资讯 <ExternalLink size={14} />
-          </Link>
-        </div>
-
-        {/* Stats bar */}
-        <div className="mt-10 p-5 rounded-2xl bg-surface-alt border border-border">
-          <div className="grid grid-cols-3 gap-4 text-center">
-            <div>
-              <div className="text-lg font-bold text-accent">{getNewsSortedByTime().length}</div>
-              <div className="text-text-tertiary text-xs mt-0.5">全网资讯</div>
-            </div>
-            <div>
-              <div className="text-lg font-bold text-accent">
-                {new Set(getNewsSortedByTime().map(n => n.source)).size}
+        {/* Stats bar — compact on mobile */}
+        <div className="mt-6 sm:mt-8 p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-surface-alt border border-border">
+          <div className="grid grid-cols-3 gap-3 text-center">
+            {[
+              { label: '全网资讯', value: allNews.length },
+              { label: '权威来源', value: new Set(allNews.map(n => n.source)).size },
+              { label: '热门资讯', value: allNews.filter(n => n.heat >= 80).length },
+            ].map((stat, i) => (
+              <div key={stat.label} className={i < 2 ? 'border-r border-border' : ''}>
+                <div className="text-base sm:text-lg font-bold text-accent">{stat.value}</div>
+                <div className="text-text-tertiary text-[11px] sm:text-xs mt-0.5">{stat.label}</div>
               </div>
-              <div className="text-text-tertiary text-xs mt-0.5">权威来源</div>
-            </div>
-            <div>
-              <div className="text-lg font-bold text-accent flex items-center justify-center gap-1">
-                <TrendingUp size={16} />
-                {(() => {
-                  const highs = getNewsSortedByTime().filter(n => n.heat >= 80).length;
-                  return highs;
-                })()}
-              </div>
-              <div className="text-text-tertiary text-xs mt-0.5">热门资讯</div>
-            </div>
+            ))}
           </div>
         </div>
       </motion.div>
